@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>John Paul V. Cureg — Software Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F3F5F3;
+    --panel:#FFFFFF;
+    --ink:#14181C;
+    --muted:#5B665F;
+    --line:#DBE1DC;
+    --teal:#0E7A75;
+    --teal-dim:#E4F1EF;
+    --amber:#B8722B;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;
+  }
+  h1,h2,h3,.mono{font-family:"Space Grotesk",-apple-system,sans-serif;}
+  .mono-data{font-family:"JetBrains Mono",monospace;}
+  a{color:var(--teal);}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px;}
+
+  header{padding:64px 0 48px;}
+  header .name{font-size:2.1rem;font-weight:700;margin:0 0 6px;letter-spacing:-0.01em;}
+  header .role{color:var(--muted);font-size:1.05rem;margin:0 0 20px;}
+  header nav{display:flex;gap:22px;font-size:.9rem;font-family:"JetBrains Mono",monospace;}
+  header nav a{text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line);padding-bottom:2px;}
+  header nav a:hover{border-color:var(--teal);color:var(--teal);}
+
+  .hero{padding:12px 0 48px;border-top:1px solid var(--line);}
+  .hero p.lede{font-size:1.28rem;max-width:640px;margin:28px 0 30px;font-weight:500;}
+  .stats{display:flex;flex-wrap:wrap;gap:14px;}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px 18px;min-width:160px;}
+  .stat .num{font-family:"JetBrains Mono",monospace;font-size:1.3rem;color:var(--teal);font-weight:500;}
+  .stat .label{font-size:.82rem;color:var(--muted);margin-top:2px;}
+
+  section{padding:44px 0;border-top:1px solid var(--line);}
+  section h2{font-size:1rem;text-transform:none;letter-spacing:0;color:var(--muted);font-weight:600;margin:0 0 26px;}
+
+  .about p{max-width:640px;color:var(--ink);}
+
+  .project{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:26px 28px;margin-bottom:20px;}
+  .project h3{font-size:1.15rem;margin:0 0 4px;}
+  .project .status{font-family:"JetBrains Mono",monospace;font-size:.75rem;color:var(--amber);margin-bottom:12px;}
+  .project p{margin:0 0 14px;color:var(--ink);}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .tag{font-family:"JetBrains Mono",monospace;font-size:.75rem;background:var(--teal-dim);color:var(--teal);padding:3px 9px;border-radius:4px;}
+  .endpoints{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:14px 16px;font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--muted);overflow-x:auto;}
+  .endpoints div{white-space:nowrap;padding:2px 0;}
+  .endpoints .verb{color:var(--teal);font-weight:500;}
+  .flow{font-family:"JetBrains Mono",monospace;font-size:.82rem;color:var(--muted);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:12px 16px;}
+
+  .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;}
+  .skill-group h4{font-size:.82rem;font-family:"JetBrains Mono",monospace;color:var(--amber);margin:0 0 10px;font-weight:500;}
+  .skill-group ul{list-style:none;margin:0;padding:0;}
+  .skill-group li{padding:4px 0;border-bottom:1px dashed var(--line);font-size:.92rem;}
+  .skill-group li:last-child{border-bottom:none;}
+
+  .timeline-item{margin-bottom:22px;}
+  .timeline-item .when{font-family:"JetBrains Mono",monospace;font-size:.78rem;color:var(--muted);}
+  .timeline-item h3{font-size:1.02rem;margin:4px 0 8px;}
+  .timeline-item ul{margin:0;padding-left:18px;color:var(--ink);}
+  .timeline-item li{margin-bottom:4px;font-size:.95rem;}
+
+  footer{padding:44px 0 70px;border-top:1px solid var(--line);}
+  footer .contact{display:flex;flex-wrap:wrap;gap:18px;font-family:"JetBrains Mono",monospace;font-size:.88rem;}
+  footer .note{color:var(--muted);font-size:.82rem;margin-top:24px;}
+
+  @media(max-width:600px){
+    header{padding:44px 0 32px;}
+    header .name{font-size:1.6rem;}
+    .hero p.lede{font-size:1.1rem;}
+    .project{padding:20px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <p class="name">John Paul V. Cureg</p>
+    <p class="role">Software Developer — Automation, Backend & Healthcare Systems</p>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <p class="lede">I build the backend systems and automation pipelines that hospital staff run their day on — mostly the kind of work nobody notices until it stops saving them time.</p>
+    <div class="stats">
+      <div class="stat"><div class="num">60+</div><div class="label">recurring reports automated</div></div>
+      <div class="stat"><div class="num">20+ hrs/wk</div><div class="label">manual work eliminated</div></div>
+      <div class="stat"><div class="num">80%</div><div class="label">fewer ad-hoc report requests</div></div>
+    </div>
+  </div>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>OR Scheduling System</h3>
+      <div class="status">in development</div>
+      <p>A scheduling dashboard for surgical procedures. Doctors, anesthesiologists, and OR staff create and manage schedules on a live calendar — changes made by one user appear for everyone else instantly, no refresh needed.</p>
+      <div class="tags">
+        <span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">SQL Server</span><span class="tag">Server-Sent Events</span>
+      </div>
+      <div class="endpoints">
+        <div><span class="verb">GET</span>  /endpoints/schedule_read.php</div>
+        <div><span class="verb">GET</span>  /endpoints/ortheater_list.php</div>
+        <div><span class="verb">POST</span> /endpoints/schedule_create.php</div>
+        <div><span class="verb">POST</span> /endpoints/schedule_update.php</div>
+        <div><span class="verb">SSE</span>  /endpoints/sse_updates.php</div>
+      </div>
+    </div>
+
+    <div class="project">
+      <h3>Report Portal &amp; Automation</h3>
+      <div class="status">live · in production</div>
+      <p>A self-service reporting portal used across every hospital department, backed by a Python/SQL automation pipeline that replaced days of manual report-building with scheduled jobs.</p>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">pandas</span><span class="tag">SQL Server</span><span class="tag">openpyxl</span><span class="tag">Task Scheduler</span>
+      </div>
+      <div class="flow">Extract — SQL views &amp; stored procedures  →  Transform — SQL joins + pandas aggregation  →  Load — formatted Excel reports</div>
+    </div>
+
+    <div class="project">
+      <h3>Doctors Portal</h3>
+      <div class="status">in development</div>
+      <p>A web application for doctors to view professional fees and patient records, with an accounting side that tracks and reports doctor payments.</p>
+      <div class="tags">
+        <span class="tag">Django</span><span class="tag">Python</span><span class="tag">Tailwind CSS</span><span class="tag">SQL Server</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>LANGUAGES</h4>
+        <ul><li>Python</li><li>PHP</li><li>JavaScript</li><li>SQL (T-SQL)</li><li>C++ / Java</li></ul>
+      </div>
+      <div class="skill-group">
+        <h4>BACKEND &amp; DATA</h4>
+        <ul><li>Django</li><li>Microsoft SQL Server</li><li>ETL pipelines (SQL + pandas)</li><li>Query optimization</li></ul>
+      </div>
+      <div class="skill-group">
+        <h4>AUTOMATION</h4>
+        <ul><li>Python scripting</li><li>Windows Task Scheduler</li><li>Power Automate</li><li>PowerShell / Batch</li></ul>
+      </div>
+      <div class="skill-group">
+        <h4>AI-ASSISTED DEV</h4>
+        <ul><li>ChatGPT (OpenAI)</li><li>Claude</li><li>GitHub Copilot</li><li>DeepSeek</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline-item">
+      <div class="when">DEC 2024 — PRESENT</div>
+      <h3>Software Developer, Automation &amp; Backend Focus — Commonwealth Hospital Medical Center</h3>
+      <ul>
+        <li>Enhanced the hospital-wide Report Portal, cutting ad-hoc report requests by 80%</li>
+        <li>Automated 60+ recurring reports, saving 20+ hours of manual work per week</li>
+        <li>Built SQL scripts, scheduled jobs, and system integrations for backend data workflows</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <div class="when">SEP 2023 — MAR 2024</div>
+      <h3>Technical Support Specialist Intern — Reed Elsevier</h3>
+      <ul>
+        <li>Diagnosed hardware/software issues and maintained IT infrastructure</li>
+        <li>Conducted LAN testing and IP configuration</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="mailto:18curegjohnpaul@gmail.com">18curegjohnpaul@gmail.com</a>
+      <a href="http://www.linkedin.com/in/johnpaulcureg" target="_blank" rel="noopener">linkedin.com/in/johnpaulcureg</a>
+      <span>Caloocan, Philippines</span>
+    </div>
+    <p class="note">Some projects run on internal hospital systems — code and screenshots aren't publicly shareable, so this page describes real architecture and outcomes instead.</p>
+  </footer>
+</div>
+
+</body>
+</html>
